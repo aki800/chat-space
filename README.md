@@ -1,4 +1,4 @@
-##messagesテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -7,43 +7,43 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-###Association
--belongs_to :group
--belongs_to :user
+### Association
+- belongs_to :group
+- belongs_to :user
 
 
-###usersテーブル
+### usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|index: true, null: false|
 |email|string|null: false|
 
-###Association
--has_many :messages
--has_many :groups, though:members
--has_many :members
+### Association
+- has_many :messages
+- has_many :groups, though:members
+- has_many :members
 
 
-###groupsテーブル
+### groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|index: true, null: false|
 
-###Association
--has_many :messages
--has_many :users, though:members
--has_many :members
+### Association
+- has_many :messages
+- has_many :users, though:members
+- has_many :members
 
 
-###membersテーブル
+### membersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-###Association
--belongs_to :group
-belongs_to :user
+### Association
+- belongs_to :group
+- belongs_to :user
 
