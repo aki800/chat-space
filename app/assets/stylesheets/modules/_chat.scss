@@ -1,0 +1,111 @@
+.chat {
+  position: relative;
+  float: right;
+  background-color: #ffffff;
+  width: calc(100% - 300px);
+  height: 100%;
+
+  .chat__group {
+    border-bottom: ridge thin #eeeeee;
+    height: 105px;
+    .group__left {
+      float: left;
+      h1.left__name {
+        margin-top: 35px;
+        margin-left: 40px;
+        color: #333333;
+        font-size: 20px;
+      }
+      h2.left__member {
+        margin-top: 15px;
+        margin-left: 40px;
+        margin-bottom: 12px;
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+    .button {
+      float: right;
+      margin-top: 28px;
+      margin-right: 40px;
+      height: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+      line-height: 40px;
+      text-align: center;
+      color: #38AEF0;
+      text-decoration: none;
+      border: thin solid;
+    }
+  }
+
+  .chat__user {
+    clear: both;
+    position: relative;
+    height: calc(100% - 105px);
+    padding-top: 46px;
+    background-color: #fafafa;
+    p.user__name {
+      margin-left: 40px;
+      color: #434A54;
+      font-size: 16px;
+      font-weight: bold;
+    }
+      span.user__date {
+        color: #999999;
+        font-size: 12px;
+        font-weight: lighter;
+      }
+    p.user__message {
+      margin-top: 10px;
+      margin-left: 40px;
+      margin-bottom: 40px;
+      color: #434A54;
+      font-size: 14px;
+    }
+    form {
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      bottom: 50px;
+      background-color: #C0C0C0;
+
+
+
+
+      textarea {
+        float: left;
+        position: relative;
+        z-index: 0;
+        height: 50px;
+        width: calc(100% - 200px);
+        margin-left: 40px;
+        margin-top: 25px;
+        vertical-align: middle;
+        color: #434A54;
+        font-size: 16px;
+      }
+      label {
+        .far.fa-image.fa-2x{
+          position: absolute;
+          z-index: 1;
+          top: 35px;
+          right: 170px;
+          }
+      }
+      .fas {
+        float: right;
+        margin-top: 25px;
+        margin-right: 40px;
+        margin-left: 15px;
+        background-color: #38AEF0;
+        color: #ffffff;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        }
+
+    }
+  }
+}
+
