@@ -1,19 +1,19 @@
 .side {
   float: left;
-  background-color: #2f3e51;
+  background-color: $sidebackground-color1;
   width: 300px;
   height: 100%;
 
    .side__user {
     position: relative;
-    background-color: #253141;
+    background-color: $sidebackground-color2;
     height:105px;
     p.user__name {
       position: absolute;
       float: left;
       top: 40%;
       left: 20px;
-      color: white;
+      color: $whitefont_base-color;
       font-size: 16px;
       font-weight: bold;
       }
@@ -32,7 +32,7 @@
     p.group__name {
       margin-top: 20px;
       margin-left: 20px;
-      color: #FFFFFF;
+      color: $whitefont_base-color;
       font-size: 15px;
       font-weight: bold;
 
@@ -40,7 +40,7 @@
     p.user__message {
       margin-top: 5px;
       margin-left: 20px;
-      color: #FFFFFF;
+      color: $whitefont_base-color;
       font-size: 11px;
       font-weight: bold;
       }
