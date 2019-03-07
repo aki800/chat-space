@@ -5,17 +5,17 @@
   %body
     %header.header
       %p
-        グループを作成しました
+        グループが作成されました
 
     .contents
       .side
         .side__user
           %p.user__name
-            kaho
+            = current_user.name
           %span.icon
             =link_to "#", class: "icon1",:style =>  "color: #ffffff;" do
               %i.fa.fa-edit
-            =link_to "#", class: "icon2", :style =>  "color: #ffffff;" do
+            =link_to edit_user_path(current_user), class: "icon2", :style =>  "color: #ffffff;" do
               %i.fas.fa-cog
         .side__group
           %p.group__name
