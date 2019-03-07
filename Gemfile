@@ -51,9 +51,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-<<<<<<< HEAD
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-rails'
-=======
->>>>>>> parent of 97b22fd... Merge pull request #1 from aki800/edit-readme
