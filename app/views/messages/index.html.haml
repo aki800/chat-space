@@ -18,13 +18,14 @@
               グループA
             %h2.left__member
               Member: kaho, neko
-          =link_to "Edit", edit_group_path(1), class: "button"
+          =link_to "Edit", edit_group_path(@group), class: "button"
         .chat__user
-          = render partial: "message"
-
-          %form{ :action => "/messages", :method => "post" }
-            %textarea{ :type => "text", :name => "message", :placeholder => "type a message", :rows => "1"}
-            %label{:for =>"file_photo"}
-              %i.far.fa-image.fa-2x
-              %input{:type =>"file", :id =>"file_photo", :style =>"display:none;"}
-            %input{ :type => "submit", :value => "Send", :class => "fas"}
+          = render partial: "message", collection: @messages
+          .form
+            = form_for [@group, @message] do |f|
+              =f.text_field :body, class: "form__message", placeholder: "type a message"
+              .form__mask
+                =f.label :image, class: "form__mask__image", for: "file_photo" do
+                  %i.far.fa-image.fa-2x
+                  =f.file_field :image, id: "file_photo", style: "display:none;"
+              =f.submit "Send", class: "fas"
