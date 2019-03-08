@@ -3,9 +3,6 @@
     %link{:rel =>"stylesheet", :href =>"https://use.fontawesome.com/releases/v5.1.0/css/all.css", :integrity =>"sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt", :crossorigin =>"anonymous"}
 
   %body
-    %header.header
-      %p
-        グループが作成されました
 
     .contents
       = render "shared/side_bar"
@@ -15,7 +12,7 @@
         .chat__group
           .group__left
             %h1.left__name
-              グループA
+              =@group.name
             %h2.left__member
               Member: kaho, neko
           =link_to "Edit", edit_group_path(@group), class: "button"
