@@ -64,14 +64,14 @@
       color: #434A54;
       font-size: 14px;
     }
-    form {
+    .form {
       position: absolute;
       width: 100%;
       height: 100px;
       bottom: 50px;
       background-color: $formbackground-color;
 
-      textarea {
+      .form__message {
         float: left;
         position: relative;
         z-index: 0;
@@ -83,7 +83,7 @@
         color: $username_message-color;
         font-size: 16px;
       }
-      label {
+      .form__mask__image {
         .far.fa-image.fa-2x{
           position: absolute;
           z-index: 1;
