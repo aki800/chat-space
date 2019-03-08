@@ -8,20 +8,8 @@
         グループが作成されました
 
     .contents
-      .side
-        .side__user
-          %p.user__name
-            = current_user.name
-          %span.icon
-            =link_to "#", class: "icon1",:style =>  "color: #ffffff;" do
-              %i.fa.fa-edit
-            =link_to edit_user_path(current_user), class: "icon2", :style =>  "color: #ffffff;" do
-              %i.fas.fa-cog
-        .side__group
-          %p.group__name
-            グループA
-          %p.user__message
-            こんちは
+      = render "shared/side_bar"
+
 
       .chat
         .chat__group
@@ -30,7 +18,7 @@
               グループA
             %h2.left__member
               Member: kaho, neko
-          =link_to "Edit", "/messages", class: "button"
+          =link_to "Edit", edit_group_path(1), class: "button"
         .chat__user
           = render partial: "message"
 
