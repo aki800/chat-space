@@ -1,0 +1,18 @@
+
+.side
+  .side__user
+    %p.user__name
+      = current_user.name
+    %span.icon
+      =link_to new_group_path, class: "icon1",:style =>  "color: #ffffff;" do
+        %i.fa.fa-edit
+      =link_to edit_user_path(current_user), class: "icon2", :style =>  "color: #ffffff;" do
+        %i.fas.fa-cog
+
+  .side__group
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        %p.group__name
+          =group.name
+        %p.user__message
+          メッセージはまだありません。

@@ -6,6 +6,7 @@
   height: 100%;
 
   .chat__group {
+    box-sizing: border-box;
     border-bottom: ridge thin $lowerborder-color;
     height: 105px;
     .group__left {
