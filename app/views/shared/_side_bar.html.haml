@@ -11,7 +11,7 @@
 
   .side__group
     - current_user.groups.each do |group|
-      = link_to group_messages_path(group) do
+      = link_to group_messages_path(group), :style => "text-decoration: none;" do
         %p.group__name
           =group.name
         %p.user__message
