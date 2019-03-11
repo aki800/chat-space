@@ -17,7 +17,8 @@
               Member: kaho, neko
           =link_to "Edit", edit_group_path(@group), class: "button"
         .chat__user
-          = render partial: "message", collection: @messages
+          .chat__user__messages
+            = render partial: "message", collection: @messages
           .form
             = form_for [@group, @message] do |f|
               =f.text_field :body, class: "form__message", placeholder: "type a message"
