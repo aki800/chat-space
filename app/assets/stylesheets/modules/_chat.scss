@@ -1,11 +1,12 @@
 .chat {
-  float: left;
+  position: relative;
+  float: right;
   background-color: $whitefont_base-color;
   width: calc(100% - 300px);
   height: 100%;
 
   .chat__group {
-    position: relative;
+    box-sizing: border-box;
     border-bottom: ridge thin $lowerborder-color;
     height: 105px;
     .group__left {
@@ -45,36 +46,29 @@
     height: calc(100% - 105px);
     padding-top: 46px;
     background-color: chatbackground-color;
-    .chat__user__messages {
-      overflow: scroll;
-      height: calc(100% - 105px);
-      p.user__name {
-        margin-left: 40px;
-        color: $username_message-color;
-        font-size: 16px;
-        font-weight: bold;
-      }
-        span.user__date {
-          color: #999999;
-          font-size: 12px;
-          font-weight: lighter;
-        }
-      p.user__message {
-        margin-top: 10px;
-        margin-left: 40px;
-        margin-bottom: 40px;
-        color: #434A54;
-        font-size: 14px;
-      }
+    p.user__name {
+      margin-left: 40px;
+      color: $username_message-color;
+      font-size: 16px;
+      font-weight: bold;
     }
-    .chat__user__messages::-webkit-scrollbar{
-      display:none;
+      span.user__date {
+        color: #999999;
+        font-size: 12px;
+        font-weight: lighter;
       }
-
+    p.user__message {
+      margin-top: 10px;
+      margin-left: 40px;
+      margin-bottom: 40px;
+      color: #434A54;
+      font-size: 14px;
+    }
     .form {
       position: absolute;
       width: 100%;
       height: 100px;
+      bottom: 50px;
       background-color: $formbackground-color;
 
       .form__message {
