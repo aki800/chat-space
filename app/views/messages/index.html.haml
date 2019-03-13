@@ -20,7 +20,7 @@
           .chat__user__messages
             = render partial: "message", collection: @messages
           .form
-            = form_for [@group, @message], html: {id: "new_message", name: "form"} do |f|
+            = form_for [@group, @message], html: {id: "new_message"} do |f|
               =f.text_field :body, class: "form__message", placeholder: "type a message"
               .form__mask
                 =f.label :image, class: "form__mask__image", for: "file_photo" do
