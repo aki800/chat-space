@@ -53,12 +53,12 @@
         color: $username_message-color;
         font-size: 16px;
         font-weight: bold;
-      }
         span.user__date {
           color: #999999;
           font-size: 12px;
           font-weight: lighter;
         }
+      }
       p.user__message {
         margin-top: 10px;
         margin-left: 40px;
@@ -66,8 +66,10 @@
         color: #434A54;
         font-size: 14px;
       }
-       .chat__user__messages::-webkit-scrollbar{
+    }
+    .chat__user__messages::-webkit-scrollbar{
       display:none;
+    }
 
 
     .form {
@@ -87,14 +89,14 @@
         vertical-align: middle;
         color: $username_message-color;
         font-size: 16px;
-      }
+        }
       .form__mask__image {
         .far.fa-image.fa-2x{
           position: absolute;
           z-index: 1;
           top: 35px;
           right: 170px;
-          }
+        }
       }
       .fas {
         float: right;
@@ -106,7 +108,7 @@
         width: 100px;
         height: 50px;
         line-height: 50px;
-        }
+      }
 
     }
   }
