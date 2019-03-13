@@ -31,7 +31,7 @@ $(document).on('turbolinks:load', function() {
       .done(function(data){
         var html = buildHTML(data);
         $('.chat__user__messages').append(html)
-        $('.form__message').val('')
+        document.form.reset()
         $('.fas').prop( 'disabled', false )
         $('.chat__user__messages').animate({scrollTop:$('.chat__user__messages')[0].scrollHeight}, 'fast');
       })
