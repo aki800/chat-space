@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function() {
 $(function() {
 
   function appendUserToLists(user) {
@@ -67,4 +68,5 @@ $(function() {
      ele.remove()
   })
 
+});
 });
