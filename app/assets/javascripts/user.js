@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function() {
 $(function() {
 
-  function appendUserToLists(user) {
+  function appendUserToSearchLists(user) {
     var html = `  <div class="chat-group-user clearfix">
                     <p class="chat-group-user__name">${ user.name }</p>
                     <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${ user.user_id }" data-user-name="${ user.name }">追加</a>
@@ -9,7 +9,7 @@ $(function() {
       $("#user-search-result").append(html);
   }
 
-  function appendNoUserToLists(user) {
+  function appendNoUserToSearchLists(user) {
     var html = `<div class="chat-group-user clearfix">
                  <p class="chat-group-user__name">
                    ${ user }
@@ -44,11 +44,11 @@ $(function() {
       $("#user-search-result").empty();
         if (user.length !== 0) {
           user.forEach(function(user){
-          appendUserToLists(user);
+          appendUserToSearchLists(user);
           });
         }
         else {
-          appendNoUserToLists("一致するユーザーが見つかりません");
+          appendNoUserToSearchLists("一致するユーザーが見つかりません");
         }
     })
     .fail(function() {
