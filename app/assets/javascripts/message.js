@@ -41,26 +41,6 @@ $(document).on('turbolinks:load', function() {
         alert('メッセージを入力してください');
       })
     })
-  })
-
-
-  $(function(){
-    function buildMESSAGE(message){
-      var addImage = (message.image.url !== null) ? `<img class="lower-message_image" src="${message.image.url}">"` : ''
-      var html =  `<div class="chat__user__messages_message">
-                     <p class="user__name">
-                       ${message.user_name}
-                          <span class="user__date" style="color: #999999; font-size: 12px; font-weight: lighter;">
-                            ${message.time}
-                          </span>
-                     </p>
-                     <p class="user__message">
-                       ${message.body}
-                     </p>
-                     ${addImage}
-                   </div> `
-      $('.chat__user__messages').append(html);
-    }
 
     $(function(){
       setInterval(autoUpdate, 5000);
@@ -79,7 +59,8 @@ $(document).on('turbolinks:load', function() {
         var now_length = $('.chat__user__messages_message').length;
         if (now_length != true_length) {
           for (var i = now_length; i < true_length; i++){
-            buildMESSAGE(messages[i]);
+            var html = buildHTML(messages[i]);
+            $('.chat__user__messages').append(html);
           }
         }
       })
