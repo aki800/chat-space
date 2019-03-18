@@ -19,12 +19,18 @@
       }
     span.icon {
       position: absolute;
-      float: right;
+      display: table;
+      float: left;
       top: 40%;
       right: 20px;
+      .icon-new-group {
+        display: table-cell;
+        padding-right: 5px;
+        }
+      .icon-edit-account {
+        display: table-cell;
+        }
       }
-
-
     }
   .side__group {
     height: calc(100% - 105px);
@@ -43,8 +49,6 @@
       font-size: 11px;
       font-weight: bold;
       }
-
-
     }
   }
 

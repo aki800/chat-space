@@ -47,9 +47,9 @@
     background-color: chatbackground-color;
     .chat__user__messages {
       overflow: scroll;
+      padding-left:40px;
       height: calc(100% - 105px);
       p.user__name {
-        margin-left: 40px;
         color: $username_message-color;
         font-size: 16px;
         font-weight: bold;
@@ -61,10 +61,15 @@
       }
       p.user__message {
         margin-top: 10px;
-        margin-left: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         color: #434A54;
         font-size: 14px;
+      }
+      .lower-message__image {
+        display:block;
+        height: 125px;
+        width: 200px;
+        margin-bottom: 40px;
       }
     }
     .chat__user__messages::-webkit-scrollbar{
