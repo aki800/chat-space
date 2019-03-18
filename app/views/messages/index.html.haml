@@ -14,7 +14,9 @@
             %h1.left__name
               =@group.name
             %h2.left__member
-              Member: kaho, neko
+              Member：
+              -@group.users.each do |member|
+                =member.name
           =link_to "Edit", edit_group_path(@group), class: "button"
         .chat__user
           .chat__user__messages

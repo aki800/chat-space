@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function() {
   $(function(){
     function buildHTML(message){
-      var addImage = (message.image.url !== null) ? `<img class="lower-message_image" src="${message.image.url}">` : ''
+      var addImage = (message.image.url !== null) ? `<img class="lower-message__image" src="${message.image.url}">` : ''
       var html =  `<div class="chat__user__messages_message">
                      <p class="user__name">
                        ${message.user_name}
@@ -65,7 +65,6 @@ $(document).on('turbolinks:load', function() {
         }
       })
       .fail(function() {
-        alert('自動更新に失敗しました');
       })
     }
   })

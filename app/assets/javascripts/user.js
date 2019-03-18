@@ -20,7 +20,7 @@ $(function() {
 
   function appendUserToMembers(name, user_id) {
     var html =`<div class="chat-group-user clearfix" id="chat-group-user-22">
-             <input name ="chat_group[user_ids][]", type ="hidden", value = "${user_id}">
+             <input name ="group[user_ids][]", type ="hidden", value = "${user_id}">
              <p class="chat-group-user__name">
                 ${name}
              </p>
@@ -61,7 +61,7 @@ $(function() {
       var user_id = $(this).attr("data-user-id");
       $(this).parent().remove();
       appendUserToMembers(name, user_id);
-  })
+  });
 
   $(document).on("click", ".user-search-remove", function(user) {
      var ele = $(this).parents("#chat-group-user-22")
