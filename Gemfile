@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'devise'
+gem 'carrierwave'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -43,7 +44,6 @@ group :development, :test do
   gem 'haml-rails'
   gem 'erb2haml'
   gem 'font-awesome-rails'
-  gem 'carrierwave'
   gem 'mini_magick'
   gem 'rspec-rails', '~> 3.5'
   gem 'factory_bot_rails'
