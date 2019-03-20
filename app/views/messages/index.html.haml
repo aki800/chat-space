@@ -1,24 +1,24 @@
-/ .contents
-/   = render "shared/side_bar"
+.contents
+  = render "shared/side_bar"
 
-/   .chat
-/     .chat__group
-/       .group__left
-/         %h1.left__name
-/           =@group.name
-/         %h2.left__member
-/           Member：
-/           -@group.users.each do |member|
-/             =member.name
-/       =link_to "Edit", edit_group_path(@group), class: "button"
-/     .chat__user
-/       .chat__user__messages
-/         = render partial: "message", collection: @messages
-/       .form
-/         = form_for [@group, @message], html: {id: "new_message"} do |f|
-/           =f.text_field :body, class: "form__message", placeholder: "type a message"
-/           .form__mask
-/             =f.label :image, class: "form__mask__image", for: "file_photo" do
-/               %i.far.fa-image.fa-2x
-/               =f.file_field :image, id: "file_photo", style: "display:none;"
-/           =f.submit "Send", class: "fas"
+  .chat
+    .chat__group
+      .group__left
+        %h1.left__name
+          =@group.name
+        %h2.left__member
+          Member：
+          -@group.users.each do |member|
+            =member.name
+      =link_to "Edit", edit_group_path(@group), class: "button"
+    .chat__user
+      .chat__user__messages
+        = render partial: "message", collection: @messages
+      .form
+        = form_for [@group, @message], html: {id: "new_message"} do |f|
+          =f.text_field :body, class: "form__message", placeholder: "type a message"
+          .form__mask
+            =f.label :image, class: "form__mask__image", for: "file_photo" do
+              %i.far.fa-image.fa-2x
+              =f.file_field :image, id: "file_photo", style: "display:none;"
+          =f.submit "Send", class: "fas"
