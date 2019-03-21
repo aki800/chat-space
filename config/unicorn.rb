@@ -2,11 +2,11 @@ app_path = File.expand_path('../../../', __FILE__)
 
 worker_processes 1
 
-working_directory "#{rails_root}/current"
-listen "#{rails_root}/shared/tmp/sockets/unicorn.sock"
-pid "#{rails_root}/shared/tmp/pids/unicorn.pid"
-stderr_path "#{rails_root}/shared/log/unicorn.stderr.log"
-stdout_path "#{rails_root}/shared/log/unicorn.stdout.log"
+working_directory "#{app_path}/current"
+listen "#{app_path}/shared/tmp/sockets/unicorn.sock"
+pid "#{app_path}/shared/tmp/pids/unicorn.pid"
+stderr_path "#{app_path}/shared/log/unicorn.stderr.log"
+stdout_path "#{app_path}/shared/log/unicorn.stdout.log"
 
 listen 3000
 timeout 60
