@@ -39,6 +39,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml-rails'
 gem 'font-awesome-rails'
+gem "actionview", '~> 5.0.7.2'
 
 
 group :development, :test do
